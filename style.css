@@ -1,3 +1,4 @@
+
 .box{
             background-color: white;
             padding: 12px 20px 10px 20px;
@@ -5,21 +6,36 @@
             width: 600px;
             border-top: solid 10px;
             border-color: #3d0db5ff;
-            border-radius: 10px;
+            border-radius: 8px;
             text-align: left;
 
 
-            margin: 0 auto;
+            margin: 15px;
         
         }
 .red{
     color: red;
 }
+
 .box2{
-    
-    
-    
-    margin: 0 auto;
+
+    background-color: white;
+    padding: 12px 20px 10px 20px;
+    height: auto;
+    width: 600px;
+    border-radius: 10px;
+    margin: 15px;
+    text-align: left;
 
 
 }
+
+.largeCheckBox{
+    width: 20px; height: 20px; 
+    accent-color: #3d0db5;
+    
+}
+.makeTheBorderThicc{
+    border: solid 3px rgb(106, 106, 106);
+}
+
