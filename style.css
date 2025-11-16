@@ -1,24 +1,31 @@
+/* HR Fix: Uses negative margins to stretch across the 20px padding in .box and .box2 */
+hr {
+    background-color: black;
+    height: 1px;
+    border: none; /* Removed default browser border */
+    margin-left: -20px;
+    margin-right: -20px;
+    
+}
 
 .box{
-            background-color: white;
-            padding: 12px 20px 10px 20px;
-            height: auto;
-            width: 600px;
-            border-top: solid 10px;
-            border-color: #3d0db5ff;
-            border-radius: 8px;
-            text-align: left;
+    background-color: white;
+    padding: 12px 20px 10px 20px;
+    height: auto;
+    width: 600px;
+    border-top: solid 10px;
+    border-color: #3d0db5ff;
+    border-radius: 8px;
+    text-align: left;
+    margin: 15px; /* Margin remains */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Added shadow for visual appeal */
+}
 
-
-            margin: 15px;
-        
-        }
 .red{
     color: red;
 }
 
 .box2{
-
     background-color: white;
     padding: 30px 20px 30px 20px;
     height: auto;
@@ -26,48 +33,65 @@
     border-radius: 10px;
     margin: 15px;
     text-align: left;
-
-
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Added shadow for visual appeal */
 }
 
+/* Styles for checkbox group (Positioning is kept as you defined it) */
 .largeCheckBox{
-    margin-top: 20px;
     width: 20px; height: 20px; 
     accent-color: #3d0db5;
-    
     position: absolute;
-    top:-20px;
-
+    top: 0px; /* Adjusted position to 0 to align with label */
     
 }
 .tt{
     position: absolute;
     left: 30px;
+    margin-top: 7px;
 }
 .moveUp{
     position: relative;
+    height: 30px; /* Added height for container to prevent collapse */
+    margin-top: 16px;
 }
-.tt{
 
-}
 .inputBorder{
-
     border-style: none none ridge none;
     color: rgb(170, 170, 170);
-
+    width: 100%;
+    padding: 4px 0;
+    border-bottom-color: #ccc;
+    outline: none;
 }
 
+.inputBorder:focus {
+    border-bottom-color: #3d0db5;
+}
 
 .file-button{
-
     background-color: white;
-    border: ridge;
+    border: 1px solid #ccc; /* Adjusted 'ridge' to 1px solid for cleaner look */
     color: #3d0db5;
     cursor: pointer;
     font-size: 16px; 
     font-weight: 500;
     border-radius: 3px;
     padding: 5px 15px;
-
+}
+.file-button:hover {
+    background-color: #f7f7f7;
 }
 
+/* Added submit button style for completeness, based on your form structure */
+.submit-button {
+    background-color: #3d0db5;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #2b088e;
+}
