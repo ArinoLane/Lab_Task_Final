@@ -1,0 +1,25 @@
+.box{
+            background-color: white;
+            padding: 12px 20px 10px 20px;
+            height: auto;
+            width: 600px;
+            border-top: solid 10px;
+            border-color: #3d0db5ff;
+            border-radius: 10px;
+            text-align: left;
+
+
+            margin: 0 auto;
+        
+        }
+.red{
+    color: red;
+}
+.box2{
+    
+    
+    
+    margin: 0 auto;
+
+
+}

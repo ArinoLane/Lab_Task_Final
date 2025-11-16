@@ -3,33 +3,26 @@
  <head>
     <title>Document</title>
  </head>
- <body style=" background-color: #e3dfedff; ">
+ <body style=" background-color: #ece9f4ff; ">
 
-    <style>
-        .box{
-            background-color: white;
-            padding: 10px;
-            height: auto;
-            width: 600px;
-            border-top: solid 10px;
-            border-color: #3d0db5ff;
-            border-radius: 10px;
-            text-align: left;
-
-
-            margin: 0 auto;
-        }
-
-    </style>
+ <link rel="stylesheet" href="style.css">
 
     
     <div class="box">
-        <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: 300;">Data Comm Lab Report</h1>
+        <label style="font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 35px ">Data Comm Lab Report</label>
         <hr> 
         <p>arindom793@gmail.com Switch account</p>
         <p>The name, email, and photo associated with your Google account will be recorded when you upload files and submit this form</p>
         <hr>
-        <p style="text-color: red">* Indicates required question</p>
+        <p class="red">* Indicates required question</p>
+    </div>
+    <div class="box2">
+        <label style="font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 35px ">Data Comm Lab Report</label>
+        <hr> 
+        <p>arindom793@gmail.com Switch account</p>
+        <p>The name, email, and photo associated with your Google account will be recorded when you upload files and submit this form</p>
+        <hr>
+        <p class="red">* Indicates required question</p>
     </div>
    
 
