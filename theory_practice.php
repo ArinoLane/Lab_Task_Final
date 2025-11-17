@@ -9,7 +9,7 @@
     
     <center>
 
-        <form>
+        <form onsubmit="return js()">
 
             <div class="box" id="topBox">
                 <label id="mainHeading" style="font-family: Arial, Helvetica, sans-serif; font-weight: 300; font-size: 35px ">Data Comm Lab Report</label>
@@ -28,14 +28,14 @@
                 </div>  
             </div>
 
-            <div class="box2">
-                <label style="font-size: 16px; font-weight: bold;">Student Name</label><label class="red">*</label>  <br><br> 
-                <input type="text" name="student_name" placeholder="Your answer" class="inputBorder" required>
+            <div class="box2" id="3rdBox">
+                <label style="font-size: 16px; font-weight: bold;" >Student Name</label><label class="red">*</label>  <br><br> 
+                <input type="text" name="student_name" placeholder="Your answer" class="inputBorder"  id="name" required>
             </div>
 
             <div class="box2">
                 <label style="font-size: 16px; font-weight: bold;">Student ID</label><label class="red">*</label>  <br><br> 
-                <input type="text" name="student_id" placeholder="Your answer" class="inputBorder" required>
+                <input type="text" name="student_id" placeholder="Your answer" id="studentID" class="inputBorder" required>
             </div>
 
             <div class="box2">
@@ -46,13 +46,20 @@
                     Add file
                 </button>
             </div>
-
+            <dev id="error"></dev>
+                <dev id="pass"></dev>
             <div style="width: 600px; margin: 15px;">
                 <button type="submit" class="submit-button" style="float: left;" onclick="btnClick()">
                     Submit
                 </button>
                 <p style="font-size: 12px; color: #6b7280; float: right; margin-top: 15px;">Never submit passwords through Google Forms.</p>
-                <div style="clear: both;"></div> </div>
+                <div style="clear: both;"></div>
+               
+                
+            
+            
+               </div>
+            
         </form>
 
     </center>

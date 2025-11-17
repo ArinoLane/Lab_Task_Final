@@ -100,7 +100,7 @@
       output.innerHTML = "";
  
       // Validation
-      if (name === "" || id === "" || age === "" || department === "") {
+      if (name === "" && id === "" || age === "" || department === "") {
         error.innerHTML = "Please fill in all fields.";
         return false;
       }

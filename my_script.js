@@ -1,9 +1,20 @@
-var body = document.body;
-var topBox = document.getElementById("topBox");
+
+let name = document.getElementById('name');
+let id = document.getElementById('studentID');
+let error = document.getElementById("error");
+let ok = document.getElementById("pass");
 
 
-function btnClick(){
-    body.style.backgroundColor = "#353438ff"
-    topBox.style.borderColor = "#694bc1ff";
-    document.getElementById("mainHeading").innerHTML = "Dark Mood Enabled LOL";
+
+function js(){
+
+    if(id.value == "" || name.value == "" ){
+        error.innerHTML = "<strong>Please fill out everything</string>";
+        
+    }
+
+    ok.innerHTML = `ALL OK! <br> your name: ${name.value} and id: ${id.value}`;
+
+    return false;
+
 }
