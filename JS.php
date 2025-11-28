@@ -40,19 +40,14 @@
   <script>
     // 1. Array of image URLs
     let images = [
-      "https://picsum.photos/id/1018/800/450", // Beach
-      "https://picsum.photos/id/1025/800/450", // Mountains
-      "https://picsum.photos/id/1035/800/450", // City
-      "https://picsum.photos/id/1043/800/450"  // Forest
+      "2.jpg", // Beach
+      "1.jpg", // Mountains
+      "3.jpg", // City
+      "4.jpg"  // Forest
     ];
 
     // 2. Preload images into cache
-    const cache = [];
-    for (let i = 0; i < images.length; i++) {
-    const img = new Image();
-    img.src = images[i];
-    cache[i] = img; // assign directly by index
-    }
+    
 
     // 3. Track current index
     let currentIndex = 0;
@@ -62,7 +57,7 @@
 
     // 5. Function to show image
     function showImage(index) {
-      slider.src = images[index].src; // use cached image
+      slider.src = images[index]; // use cached image
     }
 
     // 6. Next and Previous functions
