@@ -18,8 +18,19 @@
       padding: 5px 10px;
     } 
   </style>
+
+  <!-- ADDED: WHITE COLOR STYLE -->
+  <style id="whiteStyle">
+    body, form, label, table, th, td, input {
+      color: white !important;
+    }
+  </style>
+
 </head>
 <body>
+
+  <!-- ADDED: DARK MODE TOGGLE BUTTON -->
+  <button id="toggleMode" style="position:fixed; top:10px; left:10px;">Toggle Dark Mode</button>
   
   <form id="dataForm" onsubmit="addDataToTable(); return false;"> 
     <label>Name</label>
@@ -63,6 +74,14 @@
             document.getElementById("error").textContent = "Please enter a valid Name and Age.";
             return;
         }
+        const nameCheck = /^[a-zA-Z ]+&/;
+        if(!nameCheck.test(nameValue)){
+          document.getElementById("error").innerHTML = "ERROR, please dont use number in name";
+          nameInput.value = "";
+          ageInput.value = "";
+          return;
+        }
+
         
         let bgcolor;
         // FIX 3: Use the parsed numeric value (ageValue) for the comparison
@@ -88,6 +107,40 @@
         ageInput.value = "";
         document.getElementById("error").textContent = ""; // Clear error
     }
+
+    /* ----------------------------------
+       ADDED: DARK MODE TOGGLE JS
+    ---------------------------------- */
+    const toggleBtn = document.getElementById("toggleMode");
+    const whiteStyle = document.getElementById("whiteStyle");
+
+    let dark = false;
+
+    toggleBtn.addEventListener("click", () => {
+        dark = !dark;
+
+        if (dark) {
+            whiteStyle.innerHTML = `
+                body, form, label, table, th, td, input {
+                    color: white !important;
+                    background-color: #1a1a1a !important;
+                }
+                table, th, td {
+                    border-color: white !important;
+                }
+            `;
+        } else {
+            whiteStyle.innerHTML = `
+                body, form, label, table, th, td, input {
+                    color: black !important;
+                    background-color: white !important;
+                }
+                table, th, td {
+                    border-color: black !important;
+                }
+            `;
+        }
+    });
   </script>
 </body>
 </html>
